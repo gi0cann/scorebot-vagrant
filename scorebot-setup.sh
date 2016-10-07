@@ -8,7 +8,7 @@ pip install jaraco.modb bottle paste requests
 
 cp -rf /home/vagrant/deps/sts/ /var/www/html
 
-git clone https://github.com/dichotomy/scorebot /home/vagrant/scorebot
+git clone https://github.com/dichotomy/scorebot /home/vagrant/deps/scorebot
 
 mysql -u root -pabcd1234 < /home/vagrant/deps/db.sql
 mysql -u scorebot -ppassword sts < /home/vagrant/deps/sts/config/sts.sql
