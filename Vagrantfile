@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
     vb.name = "scorebot-dev"
   end
   config.vm.box = "ubuntu/trusty64"
-  config.vm.synced_folder "deps/", "/home/vagrant/deps"
+  config.vm.synced_folder "dev/", "/home/vagrant/dev"
   config.vm.provision "shell", path: "scorebot-setup.sh"
   config.vm.network "forwarded_port", guest: 80, host: 8888
   config.vm.network "forwarded_port", guest: 50007, host: 50007

@@ -6,11 +6,11 @@ apt-get upgrade -y
 apt-get install -y python-dnspython python-rrdtool apache2 php5 php5-mysql python-pymongo python-dns python-mysqldb wget curl git mongodb mysql-server mysql-client pip2
 pip install jaraco.modb bottle paste requests
 
-cp -rf /home/vagrant/deps/sts/ /var/www/html
+cp -rf /home/vagrant/dev/sts/ /var/www/html
 
-git clone https://github.com/dichotomy/scorebot /home/vagrant/deps/scorebot
+git clone https://github.com/dichotomy/scorebot /home/vagrant/dev/scorebot
 
-mysql -u root -pabcd1234 < /home/vagrant/deps/db.sql
+mysql -u root -pabcd1234 < /home/vagrant/dev/db.sql
 mysql -u scorebot -ppassword sts < /home/vagrant/deps/sts/config/sts.sql
 
 service apache2 restart
